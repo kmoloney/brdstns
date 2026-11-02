@@ -15,4 +15,5 @@ Imports:
  jsonlite,
  tibble,
  lutz
- 
+URL: https://github.com/kmoloney/brdstns
+BugReports: https://github.com/kmoloney/brdstns/issues
