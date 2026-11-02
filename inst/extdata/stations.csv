@@ -1,0 +1,15 @@
+Stn_key,Station,Src,id, Lat, Lon,GeoF,substat,TZ,Bw_name
+Cedar,Cedar_Cottage,puc,3471,40.6571,-74.3214,0.8,FALSE,US/EASTERN,Cedar Cottage
+Cedar,Cedar_Cottage,puc,3471,40.6566,-74.328,0.001,FALSE,US/EASTERN,Cedar Cottage
+Pajaro,Casa_Pajaro,puc,18238,35.7345,-105.9735,0.05,FALSE,US/Mountain,Casa Pajaro - Tano Road
+Munn,Munn,pi,1,42.0253,-93.6747,0,FALSE,US/CENTRAL, 
+NSW,NSW,pi,2,-33.6919,150.5283,0,FALSE,Australia/NSW,
+Rockland,Rockland,pi,3,41.5966,-70.9428,0,FALSE,US/EASTERN, 
+Trailridge,Trailridge,pi,4,42.0373,-93.6005,0,FALSE,US/CENTRAL,
+Rockland-Ames,Rockland,pi,99,42.0252,-93.6746,0,FALSE,US/CENTRAL, 
+Munn,Munn,bw,3327,42.0253,-93.6747,0,FALSE,US/CENTRAL,BirdNET-Pi - Munn Woods
+NSW,NSW,bw,4376,-33.6919,150.5283,0,FALSE,Australia/NSW,"BirdNET-Pi - Faulconbridge, NSW, Australia"
+Rockland,Rockland,bw,15090,41.5966,-70.9428,0,FALSE,US/EASTERN,BirdNET-Pi - Rockland
+Rockland-Ames,Rockland-Ames,bw,15090,42.0252,-93.6746,0,FALSE,US/CENTRAL,BirdNET-Pi - Rockland
+Trailridge,Trailridge,bw,19977,42.0373,-93.6005,0,FALSE,US/CENTRAL,BirdNET-Pi - Trail Ridge
+Brdbrain,Brdbrain,puc,6886,42.02522,-93.67453,0.1,TRUE,US/CENTRAL,Brdbrain
