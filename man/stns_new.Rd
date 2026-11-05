@@ -4,7 +4,7 @@
 \alias{stns_new}
 \title{Create directories and subdirectories for a bird listening station}
 \usage{
-stns_new(myparms, rootd = "aviary", stnf = "")
+stns_new(myparms, root = "aviary", stnf = "")
 }
 \arguments{
 \item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
@@ -13,7 +13,7 @@ stns_new(myparms, rootd = "aviary", stnf = "")
 \item \emph{myparms$mysrc:} station type for data, i.e., "puc", "bw" or "pi"
 }}
 
-\item{rootd}{Default folder for storing station data with a default of "data"}
+\item{root}{Default folder for storing station data with a default of "data"}
 
 \item{stnf}{Relative pathname to file holding listening station information.  Default path when stnf="" is "data/brddat/stations.csv".}
 }

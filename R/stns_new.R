@@ -10,7 +10,7 @@
 #'  - *myparms$mysrc:* station type for data, i.e., "puc", "bw" or "pi"
 #'
 #' @param stnf Relative pathname to file holding listening station information.  Default path when stnf="" is "data/brddat/stations.csv".
-#' @param rootd Default folder for storing station data with a default of "data"
+#' @param root Default folder for storing station data with a default of "data"
 #'
 #' @seealso
 #' - [stns_plst_set()] for parameter list structure
@@ -24,10 +24,10 @@
 #' myparms<-stns_plst_set("Munn","pi",2026,9)
 #' str(myparms)
 #' stns_new(myparms)
-stns_new<-function(myparms,rootd="aviary",stnf=""){
+stns_new<-function(myparms,root="aviary",stnf=""){
  StationName= stns_stnm(myparms,stnf="")
  StationType=myparms$mysrc
-  newRoot=paste(rootd,StationName,paste(StationName,StationType,sep="-"),sep="/")
+  newRoot=paste(root,StationName,paste(StationName,StationType,sep="-"),sep="/")
   dir.create(file.path(newRoot),recursive = TRUE,showWarnings = FALSE)
   dir.create(file.path(paste(newRoot,"archives",sep="/")),showWarnings = FALSE)
   dir.create(file.path(paste(newRoot,"archives-csv",sep="/")),showWarnings = FALSE)

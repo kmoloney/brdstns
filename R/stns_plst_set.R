@@ -35,6 +35,7 @@ stns_plst_set<-function(mystn,
              mymo=mymo,
              brdfrm=brdfrm,
              bbdat=FALSE,
+             myroot="aviary",
              ltype="stns")
 
   return(mydat)
