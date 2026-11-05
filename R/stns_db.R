@@ -1,6 +1,6 @@
 
 #' Load data table with variables defining listening stations
-#'
+#' TEST
 #' The default path name for the datatable is through the realtive path "data/brddat/stations.csv" under the current working directory.
 #'
 #' The data table loaded contains the following information:
