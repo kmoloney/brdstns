@@ -3,10 +3,10 @@
 ############################
 #' Create folder path for data file storage
 #'
-#' Produces a relative path name under the working directory based on root path ("pthroot"), station name ("stn"),
-#' station type ("sfx"), and subfolder ("sbfldr"), i.e., "pthroot/stn/stn-sfx/sbfldr"
+#' Produces a relative path name under the working directory based on root path ("myroot"), station name ("stn"),
+#' station type ("sfx"), and subfolder ("sbfldr"), i.e., "myroot/stn/stn-sfx/sbfldr"
 #'
-#' @param pthroot Starting directory for path  holding data for the project with the root being the working directory
+#' @param myroot Starting directory for path  holding data for the project with the root being the working directory
 #' @param stn Bird detection station name
 #' @param sbfldr Subfolder for holding data, e.g., "downloads", "archives", etc.
 #' @param sfx  The suffix represents the source of the station data data:
@@ -22,9 +22,9 @@
 #' fldrp(stn = "Munn")
 #' fldrp()
 #'
-fldrp <- function (pthroot = "data",stn = "", sbfldr = "", sfx = "")
+fldrp <- function (myroot = "data",stn = "", sbfldr = "", sfx = "")
 {
-  fldr_path = pthroot
+  fldr_path = myroot
   if(sfx != "") sfx = paste("-",sfx, sep = "")
 
   if(stn != ""){

@@ -4,10 +4,10 @@
 \alias{fldrp}
 \title{Create folder path for data file storage}
 \usage{
-fldrp(pthroot = "data", stn = "", sbfldr = "", sfx = "")
+fldrp(myroot = "data", stn = "", sbfldr = "", sfx = "")
 }
 \arguments{
-\item{pthroot}{Starting directory for path  holding data for the project with the root being the working directory}
+\item{myroot}{Starting directory for path  holding data for the project with the root being the working directory}
 
 \item{stn}{Bird detection station name}
 
@@ -24,8 +24,8 @@ fldrp(pthroot = "data", stn = "", sbfldr = "", sfx = "")
 Path to a data folder
 }
 \description{
-Produces a relative path name under the working directory based on root path ("pthroot"), station name ("stn"),
-station type ("sfx"), and subfolder ("sbfldr"), i.e., "pthroot/stn/stn-sfx/sbfldr"
+Produces a relative path name under the working directory based on root path ("myroot"), station name ("stn"),
+station type ("sfx"), and subfolder ("sbfldr"), i.e., "myroot/stn/stn-sfx/sbfldr"
 }
 \examples{
 fldrp(stn = "Munn",sbfldr = "archives", sfx = "bw")

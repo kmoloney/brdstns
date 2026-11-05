@@ -4,7 +4,7 @@
 \alias{stns_new}
 \title{Create directories and subdirectories for a bird listening station}
 \usage{
-stns_new(myparms, rootd = "data", stnf = "")
+stns_new(myparms, rootd = "aviary", stnf = "")
 }
 \arguments{
 \item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
@@ -22,6 +22,11 @@ nothing
 }
 \description{
 Create directories and subdirectories for a bird listening station
+}
+\examples{
+myparms<-stns_plst_set("Munn","pi",2026,9)
+str(myparms)
+stns_new(myparms)
 }
 \seealso{
 \itemize{

@@ -21,8 +21,10 @@
 #'
 #'
 #' @examples
-#'
-stns_new<-function(myparms,rootd="data",stnf=""){
+#' myparms<-stns_plst_set("Munn","pi",2026,9)
+#' str(myparms)
+#' stns_new(myparms)
+stns_new<-function(myparms,rootd="aviary",stnf=""){
  StationName= stns_stnm(myparms,stnf="")
  StationType=myparms$mysrc
   newRoot=paste(rootd,StationName,paste(StationName,StationType,sep="-"),sep="/")
