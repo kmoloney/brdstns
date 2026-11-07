@@ -1,0 +1,35 @@
+---
+title: "Stations"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Stations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+
+```{r setup}
+library(brdstns)
+```
+# Stations databse example 
+```{r , echo=FALSE}
+
+mystns=system.file("extdata/stations.csv", package = "brdbrain")
+mystat<-stns_db(stnf=mystns)
+knitr::kable(mystat)
+
+```
+ **Example 'stations.csv' data table**
+ \tabular{cccccccccccccc}{
+   **Stn_key** \tab **Station** \tab **Src** \tab **id** \tab **Lat** \tab **Lon** \tab **GeoF** \tab **substat** \tab **TZ** \tab **Bw_name**\cr
+  Munn \tab 	Munn \tab 	pi \tab 	1	 \tab 42.0253 \tab 	-93.6747 \tab 	0.001 \tab FALSE	\tab US/CENTRAL \tab NULL\cr
+  Cedar	\tab Cedar_Cottage \tab 	puc	\tab 3471	\tab 40.6566 \tab 	-74.328	\tab 0.001	\tab FALSE \tab 	US/EASTERN	\tab Cedar Cottage \cr
+  NSW		\tab NSW	\tab 	bw		\tab 4376	\tab 	-33.6919	\tab 	150.5283	\tab 	0.01		\tab FALSE	\tab 	Australia/NSW		\tab BirdNET-Pi - Faulconbridge, NSW, Australia \cr
+}
