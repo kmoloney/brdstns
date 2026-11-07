@@ -17,3 +17,7 @@ Imports:
  lutz
 URL: https://github.com/kmoloney/brdstns
 BugReports: https://github.com/kmoloney/brdstns/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

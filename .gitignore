@@ -1,5 +1,6 @@
 .Rproj.user
 Readme.md
 README.md
-aviary/
 .Rhistory
+aviary
+inst/doc
