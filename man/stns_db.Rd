@@ -2,9 +2,7 @@
 % Please edit documentation in R/stns_db.R
 \name{stns_db}
 \alias{stns_db}
-\title{Load data table with variables defining listening stations
-TEST
-The default path name for the datatable is through the realtive path "data/brddat/stations.csv" under the current working directory.}
+\title{Load data table with variables defining listening stations}
 \usage{
 stns_db(stnf = "")
 }
@@ -15,6 +13,9 @@ stns_db(stnf = "")
 Dataframe containing listening staton parameters
 }
 \description{
+The default path name for the datatable is through the realtive path "data/brddat/stations.csv" under the current working directory.
+}
+\details{
 The data table loaded contains the following information:
 \itemize{
 \item \emph{Stn_key:} Short name of the listening station
@@ -48,8 +49,7 @@ The id's for "puc" and "bw" are set by the maintainers of Birdweather.com and ob
 \item Names for BirdNET-PI stations are given by station owner and a prefix of "BirdNET-Pi - " is added as a prefix by the Birdweather site for "bw" data.
 }
 }
-}
-\details{
+
 \strong{Example 'stations.csv' data table}
 \tabular{cccccccccccccc}{
 \strong{Stn_key} \tab \strong{Station} \tab \strong{Src} \tab \strong{id} \tab \strong{Lat} \tab \strong{Lon} \tab \strong{GeoF} \tab \strong{substat} \tab \strong{TZ} \tab \strong{Bw_name}\cr
@@ -59,6 +59,6 @@ NSW		\tab NSW	\tab 	bw		\tab 4376	\tab 	-33.6919	\tab 	150.5283	\tab 	0.01		\tab
 }
 }
 \examples{
-mystns=system.file("extdata/stations.csv", package = "brdbrain")
+mystns=system.file("extdata/stations.csv", package = "brdstns")
 stns_db(stnf=mystns)
 }

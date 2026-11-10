@@ -18,7 +18,7 @@
 #'  - [stns_db()] -- *functions called by 'bb_stns_id( )'*
 #'
 #' @examples
-#' myfile <- system.file("extdata/stations.csv", package = "brdbrain")
+#' myfile <- system.file("extdata/stations.csv", package = "brdstns")
 #' stns_id("Munn","pi",stnf=myfile)
 #' stns_id("Munn","bw",stnf=myfile)
 #' stns_id("Brdbrain","puc",stnf=myfile)

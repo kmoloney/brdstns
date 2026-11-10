@@ -18,19 +18,26 @@ export(stns_id)
 export(stns_new)
 export(stns_plst_set)
 export(stns_stnm)
-importFrom(RSQLite,SQLite)
-importFrom(RSQLite,dbConnect)
-importFrom(RSQLite,dbDisconnect)
-importFrom(RSQLite,dbReadTable)
-importFrom(ghql,GraphqlClient)
-importFrom(ghql,Query)
+importFrom(RSQLite,
+  SQLite,
+  dbConnect,
+  dbDisconnect,
+  dbReadTable
+)
+importFrom(fs,dir_tree)
+importFrom(ghql,
+  GraphqlClient,
+  Query
+)
 importFrom(jsonlite,fromJSON)
-importFrom(lubridate,date)
-importFrom(lubridate,day)
-importFrom(lubridate,month)
-importFrom(lubridate,with_tz)
-importFrom(lubridate,year)
-importFrom(lubridate,ymd_hms)
+importFrom(lubridate,
+  date,
+  day,
+  month,
+  with_tz,
+  year,
+  ymd_hms
+)
 importFrom(lutz,tz_lookup_coords)
 importFrom(tibble,as_tibble)
 importFrom(utils,read.csv)

@@ -4,7 +4,7 @@
 \alias{stns_new}
 \title{Create directories and subdirectories for a bird listening station}
 \usage{
-stns_new(myparms, root = "aviary", stnf = "")
+stns_new(myparms, root = "Aviary", stnf = "")
 }
 \arguments{
 \item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
@@ -24,9 +24,21 @@ nothing
 Create directories and subdirectories for a bird listening station
 }
 \examples{
-myparms<-stns_plst_set("Munn","pi",2026,9)
-str(myparms)
-stns_new(myparms)
+\dontshow{.old_wd <- setwd(tempdir())}
+myparms<-stns_plst_set("Cedar","puc",2026,9)
+mystns=system.file("extdata/stations.csv", package = "brdstns")
+# Create a new directories and subdirectories in the default location
+stns_new(myparms,stnf=mystns)
+fs::dir_tree("Aviary")
+
+# Create new directories and subdirectories under a non-default directory, e.g., Test/
+stns_new(myparms,root="Test",stnf=mystns)
+myparms<-stns_plst_set("NSW","pi",2026,9)
+stns_new(myparms,root="Test",stnf=mystns)
+myparms<-stns_plst_set("NSW","bw",2026,9)
+stns_new(myparms,root="Test",stnf=mystns)
+fs::dir_tree("Test")
+\dontshow{setwd(.old_wd)}
 }
 \seealso{
 \itemize{

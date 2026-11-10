@@ -1,6 +1,6 @@
 
 #' Load data table with variables defining listening stations
-#' TEST
+#'
 #' The default path name for the datatable is through the realtive path "data/brddat/stations.csv" under the current working directory.
 #'
 #' The data table loaded contains the following information:
@@ -45,7 +45,7 @@
 # #' - [bb_stns_id()]
 #'
 #' @examples
-#' mystns=system.file("extdata/stations.csv", package = "brdbrain")
+#' mystns=system.file("extdata/stations.csv", package = "brdstns")
 #' stns_db(stnf=mystns)
 stns_db <- function(stnf=""){
   if(stnf=="")stnf="data/brddat/stations.csv"
