@@ -27,7 +27,7 @@ str(myparms)
 ##-----------------------
 # get id for PUC station database downloaded from birdweather.com
 ##-----------------------
-myparms$mystnsf=myfile
+myparms$stnsf=myfile
 stns_id_p(myparms)
 ##-----------------------
 # get id for BirdNET-Pi station associated with SQLite database file download

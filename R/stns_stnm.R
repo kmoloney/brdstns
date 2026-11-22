@@ -35,7 +35,7 @@
 #' stns_stnm(myparms,stnf=mystns)
 #'
 stns_stnm <- function(myparms,stnf=""){
-  if(stnf=="")stnf=myparms$mystnsf
+  if(stnf=="")stnf=myparms$stnsf
 if(file.exists(stnf)){
   if(stns_chk_stnp(myparms,stnf)){
        tmpStns<-stns_db_p(myparms,stnf)

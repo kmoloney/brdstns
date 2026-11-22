@@ -94,7 +94,7 @@ stns_chk_src<-function(mysrc){
 #' stns_chk_db(stnf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/"))
 #' stns_chk_db("xx")
 stns_chk_db<-function(stnf=""){
-  if(stnf=="")stnf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/")
+  if(stnf=="")stnf=paste(stnsroot,"brddat/stations.csv",sep="/")
   if (file.exists(stnf)){
     return(TRUE)
   }

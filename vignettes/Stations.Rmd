@@ -18,7 +18,9 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(brdstns)
 ```
-## Stations database example 
+
+## Stations database example
+
 ```{r , echo=FALSE}
 
 mystns=system.file("extdata/stations.csv", package = "brdstns")
@@ -27,11 +29,11 @@ knitr::kable(mystat)
 
 ```
 
-
 ## Parameter list for stations routines called
+
 *The example below results from calling 'stns_plst_set("Munn","pi",2026,9)'*
 
 ```{r , echo=FALSE}
-myparms<-stns_plst_set("Munn","pi",2026,9)
+myparms<-stns_plst_set("Munn","puc",myyr=2026,mymo = 6)
 str(myparms)
 ```

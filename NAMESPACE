@@ -31,6 +31,7 @@ export(stns_plst_set)
 export(stns_stn_add)
 export(stns_stn_addp)
 export(stns_stnm)
+export(stnsroot)
 importFrom(DBI,dbGetQuery)
 importFrom(RSQLite,
   SQLite,
