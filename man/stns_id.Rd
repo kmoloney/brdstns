@@ -26,9 +26,9 @@ Station ids are stored locally in "data/brddat/stations.csv" which must be in th
 }
 \examples{
 myfile <- system.file("extdata/stations.csv", package = "brdstns")
-stns_id("Munn","pi",stnf=myfile)
-stns_id("Munn","bw",stnf=myfile)
-stns_id("Brdbrain","puc",stnf=myfile)
+stns_id("Cedar","puc",stnf=myfile)
+stns_id("NSW","bw",stnf=myfile)
+stns_id("NSW","pi",stnf=myfile)
 }
 \seealso{
 \itemize{

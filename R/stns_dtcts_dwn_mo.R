@@ -9,14 +9,16 @@
 #'
 #' @seealso
 #' - [stns_plst_set()] for information on list structure and how to set 'myparms'
-#' - [sqlite_dtcts_dwn_mo()] for downloading a month of data from native BirdNET-Pi databases
+#' - [sql_dtcts_dwn_mo()] for downloading a month of data from native BirdNET-Pi databases
 #' - [grphql_dtcts_dwn_mo()] for downloading a month of data from [Birdweather.com](https://birdweather.com) databases
 #' @export
 #'
 #' @examples
+#'
+#' myparms=stns_plst_set(mystn = "Munn", mysrc ="bw",myyr=2026,mymo=11)
 stns_dtct_dwn_mo<-function(myparms){
   if(myparms$mysrc=="pi"){
-    sqlite_dtcts_dwn_mo(myparms) ->myparms
+    sql_dtcts_dwn_mo(myparms) ->myparms
   }
   if(myparms$mysrc=="bw" || myparms$mysrc=="puc") {
     grphql_dtcts_dwn_mo(myparms) ->myparms

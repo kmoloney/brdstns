@@ -24,6 +24,11 @@ File name with its relative path
 \description{
 Set filename with path
 }
+\examples{
+myparms=stns_plst_set("Cedar_Cottage","puc",myyr=2026,mymo=9)
+mystns=system.file("extdata/stations.csv", package = "brdstns")
+dat_fldrfnmp(myparms,sbfldr="archives",stnf=mystns)
+}
 \seealso{
 \itemize{
 \item \code{\link[=dat_fldrp]{dat_fldrp()}}

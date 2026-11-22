@@ -4,7 +4,7 @@
 \alias{stns_new}
 \title{Create directories and subdirectories for a bird listening station}
 \usage{
-stns_new(myparms, root = "Aviary", stnf = "")
+stns_new(myparms, root = "", stnf = "")
 }
 \arguments{
 \item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:

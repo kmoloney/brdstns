@@ -13,8 +13,13 @@
 #' @export
 #'
 #' @examples
+#'
+#' myparms=stns_plst_set(mystn = "Munn", mysrc ="pi",myyr=2026,mymo=11)
+#'
+#'
 grphql_dtcts_dwn_mo<-function(myparms){
-  myStations=c(stns_id(myparms$mystn,myparms$mysrc)[1])
+  #myStations=c(stns_id(myparms$mystn,myparms$mysrc)[1])
+  myStations=c(stns_id_p(myparms)[1])
   q_vars=grphql_qvars_set_mo(myparms$myyr,myparms$mymo,myStations)
   print("Downloading data from Birdweather...")
   grphql_dtcts_dwn(vars=q_vars) -> myBirds

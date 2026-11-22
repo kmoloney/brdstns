@@ -96,13 +96,13 @@ grphql_dtcts_dwn<-function(vars=""){
   ###---- Intiate connection
   ###----
   link <- 'https://app.birdweather.com/graphql'
-  conn <- GraphqlClient$new(url = link)
+  mycon <- GraphqlClient$new(url = link)
   q_vars=vars
   ###----
   ###--- Grab first page of data and setup to grab following pages
   ###----
   myQ <- Query$new()$query('link', q_detects_first)
-  result <- conn$exec(myQ$link, variables =q_vars) |> #%>%
+  result <- mycon$exec(myQ$link, variables =q_vars) |> #%>%
     fromJSON(flatten = F)
   result$data$detections$nodes  |> #%>%
     as_tibble() ->testT
@@ -114,7 +114,7 @@ grphql_dtcts_dwn<-function(vars=""){
   ###---- Loop through pages
   while(isTRUE(nwPage)){
     q_vars$cafter=result$data$detection$pageInfo$endCursor
-    result <- conn$exec(myQ$link, variables = q_vars) |> #%>%
+    result <- mycon$exec(myQ$link, variables = q_vars) |> #%>%
       fromJSON(flatten = F)
     result$data$detections$nodes  |> #%>%
       as_tibble() ->answersI

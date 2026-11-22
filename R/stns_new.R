@@ -2,7 +2,7 @@
 ##setwd("~/SynologyDrive/R-code/birdnet")
 #StationName="Trailridge"
 #StationType="bw"
-
+###### NOTE: Modify this to create subdirectories as needed
 #' Create directories and subdirectories for a bird listening station
 #'
 #' @param myparms List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
@@ -39,7 +39,8 @@
 #' fs::dir_tree("Test")
 #'\dontshow{setwd(.old_wd)}
 
-stns_new<-function(myparms,root="Aviary",stnf=""){
+stns_new<-function(myparms,root="",stnf=""){
+  if(root=="")root=brdstns::stnsroot
  StationName= stns_stnm(myparms,stnf=stnf)
  StationType=myparms$mysrc
   newRoot=paste(root,StationName,paste(StationName,StationType,sep="-"),sep="/")

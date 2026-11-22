@@ -1,4 +1,9 @@
-Stn_key,Station,Src,id, Lat, Lon,GeoF,substat,TZ,Bw_name
-Cedar,Cedar_Cottage,puc,3471,40.6571,-74.3214,0.8,FALSE,US/EASTERN,Cedar Cottage
-NSW,NSW,pi,2,-33.6919,150.5283,0,FALSE,Australia/NSW,
-NSW,NSW,bw,4376,-33.6919,150.5283,0,FALSE,Australia/NSW,"BirdNET-Pi - Faulconbridge, NSW, Australia"
+"Stn_key","Station","Src","id","Lat","Lon","GeoF","substat","TZone","dtFirst","dtLast","state","country","continent","Bw_name"
+"Munn","Munn","pi",1,42.0252367,-93.6746832,0.1,FALSE,"America/Chicago","2024-03-11","2026-11-20","Iowa","United States","North America",NA
+"Munn","Munn","bw",3327,42.0252367,-93.6746832,0.1,FALSE,"America/Chicago","2024-03-11","2026-11-20","Iowa","United States","North America","BirdNET-Pi - Munn Woods"
+"Rockland","Rockland","pi",3,41.5966,-70.9428,0.1,FALSE,"America/New_York","2025-06-19","2026-11-20","Massachusetts","United States","North America",NA
+"Rockland","Rockland","bw",15090,41.5966,-70.9428,0.1,FALSE,"America/New_York","2025-06-19","2026-11-20","Massachusetts","United States","North America","BirdNET-Pi - Rockland"
+"NSW","NSW","pi",4,-33.6919,150.5283,0.1,FALSE,"Australia/Sydney","2024-05-18","2026-11-20","New South Wales","Australia","Oceania",NA
+"NSW","NSW","bw",4376,-33.6919,150.5283,0.1,FALSE,"Australia/Sydney","2024-05-18","2026-11-20","New South Wales","Australia","Oceania","BirdNET-Pi - Faulconbridge, NSW, Australia"
+"Cedar","Cedar_Cottage","puc",3471,40.657139,-74.321358,0.1,FALSE,"America/New_York","2024-03-18","2026-11-21","New Jersey","United States","North America","Cedar Cottage"
+"Cedar0","PUC-2395","puc",2395,48.219799,11.012595,0.1,FALSE,"Europe/Berlin","2023-12-31","2026-11-21","Bayern","Germany","Europe","PUC-2395"

@@ -33,7 +33,6 @@
 #'  NSW		\tab NSW	\tab 	bw		\tab 4376	\tab 	-33.6919	\tab 	150.5283	\tab 	0.01		\tab FALSE	\tab 	Australia/NSW		\tab BirdNET-Pi - Faulconbridge, NSW, Australia \cr
 #' }
 #'
-#' @param stnf relative path of stations.csv file. Default is "data/brddat/stations.csv"
 #'
 #' @importFrom utils read.csv
 #'
@@ -44,15 +43,18 @@
 # #' - [bb_stns_stnm()]
 # #' - [bb_stns_id()]
 #'
+#' @param stnf path to stations database file
+#'
 #' @examples
 #' mystns=system.file("extdata/stations.csv", package = "brdstns")
 #' stns_db(stnf=mystns)
 stns_db <- function(stnf=""){
-  if(stnf=="")stnf="data/brddat/stations.csv"
+  if(stnf=="")stnf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/")
+   # thestns=paste(stnsroot,sbfldr,"stations.csv",sep="/")
   if (file.exists(stnf)){
     bbstns  <- read.csv(stnf)
     return(bbstns)
-  } else {   print("The station database file was not found: 'data/brddat/stations.csv'")
+  } else {   print(paste("The station database file was not found: ",stnf))
     print("Set working directory so that the file is available")
     print("See help for '?stns_db' to learn how to set up the stations file")
   }

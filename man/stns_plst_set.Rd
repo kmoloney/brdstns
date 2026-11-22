@@ -2,28 +2,61 @@
 % Please edit documentation in R/stns_plst_set.R
 \name{stns_plst_set}
 \alias{stns_plst_set}
-\title{Set parameters for processing data with brdbrain}
+\title{Create a list of arguments for downloading data for bird listening stations}
 \usage{
-stns_plst_set(mystn, mysrc, myyr, mymo, brdfrm = NULL)
+stns_plst_set(
+  mystn,
+  mysrc,
+  myid = 0,
+  myyr = 0,
+  mymo = 0,
+  brdfrm = NULL,
+  myroot = brdstns::stnsroot,
+  stnf = "",
+  show = FALSE
+)
 }
 \arguments{
 \item{mystn}{Short station name ('Stn_key' in stations database)}
 
-\item{mysrc}{Station src which can be "puc", "bw" or "pi"}
+\item{mysrc}{Station src which can be "puc", "bw" or "pi" ('Src' in stations database)}
 
-\item{myyr}{Year of data to process}
+\item{myid}{Unique id number for station.  Puc and bw ids are provided by birdweather.com. The brdstns package will automatically produce an id when a new station is added.}
 
-\item{mymo}{Month of data to process}
+\item{myyr}{Year of data to process, default is 0 but many routines will require a specific year to be entered.}
 
-\item{brdfrm}{Brdbrain dataframe for further analysis, usually populated internally by functions}
+\item{mymo}{Month of data to process, default is 0 but some routines may require a specific year to be entered.}
+
+\item{brdfrm}{Brdbrain dataframe for further analysis, usually populated internally after downloading data and used to pass data for further processing in other packages}
+
+\item{myroot}{Root directory below which all output is stored. The package default value is "Aviary"}
+
+\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+
+\item{show}{Boolean with a default of FALSE.  Setting it to true prints out the list structure when the function is called}
 }
 \value{
 List containing parameters for brdstns routines
 }
 \description{
-\code{stns_plst_set()} constructs a list of parameters to pass to brdbrain routines
+\code{stns_plst_set()} constructs a list of parameters to pass to brdstns routines for downloading data directly from
+Birdnet-Pi database files (\emph{mysrc}="pi"), or from data stored at app.birdweather.com
+for Birdnet-Pi stations (\emph{mysrc}="bw") or puc stations (\emph{mysrc}="puc")
+}
+\details{
+\subsection{Parameters in list not set directly through function arguments}{
+\itemize{
+\item \emph{mystnsf:} contains the path to the stations database file from the current working directory.  It is set to 'myroot/brddat/stations.csv' when the list is created.
+\item \emph{bbdat:} boolean value set to FALSE indicating any dataframe pointed to by brdfrm is raw download data
+\item \emph{ltype:} indicates the type of parameter list, in this case one used by the brdstns package and set to a value of \emph{"stns"}
+}
+}
 }
 \examples{
 myparms<-stns_plst_set("Munn","pi",2026,9)
+str(myparms)
+myparms<-stns_plst_set("Munn","pi",2026,9)
+str(myparms)
+myparms<-stns_plst_set("Munn","pi",2026,9,myroot="data")
 str(myparms)
 }

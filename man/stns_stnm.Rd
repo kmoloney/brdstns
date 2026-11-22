@@ -2,37 +2,46 @@
 % Please edit documentation in R/stns_stnm.R
 \name{stns_stnm}
 \alias{stns_stnm}
-\title{Returns station name}
+\title{Get full station name}
 \usage{
 stns_stnm(myparms, stnf = "")
 }
 \arguments{
-\item{myparms}{List of station parameters set with 'bw_parmlist()'}
+\item{myparms}{List containing station parameters set with 'bw_parmlist()'}
 
-\item{stnf}{Relative pathname to file holding listening station information.  Default path when stnf="" is "data/brddat/stations.csv".}
+\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
 }
 \value{
-Full station name
+Full station name: the '\emph{Station}' variable in the 'stations.csv' database
 }
 \description{
-Extracts a full station name from a locally stored "station.csv" data table using a short name and station src as keys
+Extracts a full station name from a locally stored "station.csv" database file using values for the key ('\emph{Stn_key}') and src ('\emph{Src}') associated with the unique station
 }
 \examples{
-myparms=stns_plst_set("Cedar","puc",2026,9)
-mystns=system.file("extdata/stations.csv", package = "brdbrain")
+##----------------------------
+##---- set up parameters for function call
+##----------------------------
+mystns=system.file("extdata/stations.csv", package = "brdstns")
+myparms=stns_plst_set("Cedar","puc")
+str(myparms)
+##----------------------------
 ##---- station entry found in stations database
+##----------------------------
 stns_stnm(myparms,stnf=mystns)
-##---- station entry not found in stations database
-##---- the station key value 'myparms$mystn'  is returned as the station name
-myparms=stns_plst_set("Cedars","puc",2026,9)
-stns_stnm(myparms,stnf=mystns)
-##---- The stations database file is not found so the station key value 'myparms$mystn'
-##---- is returned as the station name
+##----------------------------
+##---- The stations database file is not found
+##----------------------------
 stns_stnm(myparms,stnf="dummy")
+##----------------------------
+##---- station entry not found in stations database
+##----------------------------
+myparms=stns_plst_set("Cedars","puc")
+stns_stnm(myparms,stnf=mystns)
 
 }
 \seealso{
 \itemize{
-\item \code{\link[=stns_db]{stns_db()}} for more information
+\item \code{\link[=stns_db]{stns_db()}} for information on the variables in the stations database file.
+\item \code{\link[=stns_plst_set]{stns_plst_set()}} for information on the parameter list ('myparms') argument
 }
 }

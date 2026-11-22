@@ -7,7 +7,7 @@
 stns_db(stnf = "")
 }
 \arguments{
-\item{stnf}{relative path of stations.csv file. Default is "data/brddat/stations.csv"}
+\item{stnf}{path to stations database file}
 }
 \value{
 Dataframe containing listening staton parameters

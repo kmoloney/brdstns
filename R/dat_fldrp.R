@@ -27,9 +27,12 @@
 # fldrp(myparm,"archives",root="data",stnf=mystns)
 dat_fldrp<-function(parmlst, sbfldr="",root="data",stnf=""){
   thestn=stns_stnm(parmlst,stnf=stnf)
-  thepath=  fldrp(myroot = root,stn =thestn, sbfldr =sbfldr, sfx =parmlst$mysrc)
+#  thepath=  fldrp(myroot = root,stn =thestn, sbfldr =sbfldr, sfx =parmlst$mysrc)
+  thepath=  fldrp(myroot = parmlst$myroot,stn =thestn, sbfldr =sbfldr, sfx =parmlst$mysrc)
   if(!file.exists(thepath)){
-    dir.create(thepath)
+    dir.create(thepath,recursive = TRUE,showWarnings = FALSE)
+    print(paste("New data directory created: ",thepath,sep=""))
+    #print("Here-dat_fldrp")
   }
   return(thepath)
 }

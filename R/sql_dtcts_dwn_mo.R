@@ -15,7 +15,7 @@
 #' @export
 #'
 #' @examples
-sqlite_dtcts_dwn_mo<-function(myparms){
+sql_dtcts_dwn_mo<-function(myparms){
   # 1. Connect to the SQLite database
   con <- dbConnect(SQLite(), file.choose() )
   # 2. Read the entire table into a data frame

@@ -15,10 +15,14 @@ Parameter list with downloaded data attached
 \description{
 Calls functions to query PUC or BirdNET-Pi database for one month of data
 }
+\examples{
+
+myparms=stns_plst_set(mystn = "Munn", mysrc ="bw",myyr=2026,mymo=11)
+}
 \seealso{
 \itemize{
 \item \code{\link[=stns_plst_set]{stns_plst_set()}} for information on list structure and how to set 'myparms'
-\item \code{\link[=sqlite_dtcts_dwn_mo]{sqlite_dtcts_dwn_mo()}} for downloading a month of data from native BirdNET-Pi databases
+\item \code{\link[=sql_dtcts_dwn_mo]{sql_dtcts_dwn_mo()}} for downloading a month of data from native BirdNET-Pi databases
 \item \code{\link[=grphql_dtcts_dwn_mo]{grphql_dtcts_dwn_mo()}} for downloading a month of data from \href{https://birdweather.com}{Birdweather.com} databases
 }
 }

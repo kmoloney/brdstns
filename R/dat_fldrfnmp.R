@@ -16,9 +16,9 @@
 #' - [stns_plst_set()]
 #'
 #' @examples
-# myparms=stns_plst_set("Cedar_Cottage","puc",2026,9)
-# mystns=system.file("extdata/stations.csv", package = "brdstns")
-# dat_fldrfnmp(myparms,sbfldr="archives",stnf=mystns)
+#' myparms=stns_plst_set("Cedar_Cottage","puc",myyr=2026,mymo=9)
+#' mystns=system.file("extdata/stations.csv", package = "brdstns")
+#' dat_fldrfnmp(myparms,sbfldr="archives",stnf=mystns)
 dat_fldrfnmp<-function(myparms,sbfldr="",root="data",extn=".csv",stnf=""){
   thepath= dat_fldrp(parmlst=myparms,sbfldr=sbfldr,root=root,stnf=stnf)
   return(dat_fnmp(myparms,mypath = thepath,extn=extn,stnf=stnf))

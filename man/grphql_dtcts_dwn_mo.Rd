@@ -16,6 +16,12 @@ Dataframe with retreived monthly data
 \description{
 Downloads data from Birdweather.com databases for BirdNET-Pi and PUC stations
 }
+\examples{
+
+myparms=stns_plst_set(mystn = "Munn", mysrc ="pi",myyr=2026,mymo=11)
+
+
+}
 \seealso{
 \itemize{
 \item \code{\link[=stns_plst_set]{stns_plst_set()}}

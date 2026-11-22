@@ -23,12 +23,5 @@ grphql_dtcts_mod<-function(testT){
     Mode=testT$mode
   )
 
-  #### Fix GraphQL timestamp for processing; the form produced does not covert to proper local time but fixes problem not being able to process at all
-  #  myBirds$Timestamp=gsub("T", " ", myBirds$Timestamp[])
-  # myBirds$Timestamp=gsub("\\+"," +",myBirds$Timestamp[])
-  #  myBirds$Timestamp=gsub("\\-"," -",myBirds$Timestamp[])
-  #### Fix GraphQL END
-  #myText=myBirds$Timestamp[]
-  # myBirds$Timestamp<- substr(myBirds$Timestamp[], 1, nchar(myBirds$Timestamp[])-6)
   return(myBirds)
 }

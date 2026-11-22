@@ -19,6 +19,9 @@ Downloaded data attached to the 'myparms' list argument is saved in subfolders t
 \item The RSD file is saved in an "archives" subfolder
 }
 }
+\examples{
+myparms=stns_plst_set("Munn","bw",myyr=2026,mymo=03)
+}
 \seealso{
 \code{\link[=stns_plst_set]{stns_plst_set()}}
 }

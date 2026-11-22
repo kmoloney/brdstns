@@ -17,5 +17,5 @@ grphql_qvars_set(start, end, stns)
 List of variables to feed to query
 }
 \description{
-List is used as argument for 'grphql_dtcts_dwn()' to download detection data from Birdweather.com
+List is used as argument for 'grphql_dtcts_dwn()' to download detection data from Birdweather.com \href{https://app.birdweather.com}{map}
 }
