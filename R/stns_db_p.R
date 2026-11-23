@@ -50,7 +50,7 @@
 #' mystns=system.file("extdata/stations.csv", package = "brdstns")
 #' stns_db(stnf=mystns)
 stns_db_p <- function(myparms,stnf=""){
-  if(stnf=="")stnf=myparms$stnsf
+  if(stnf=="")stnf=myparms$mystnsf
   # thestns=paste(stnsroot,sbfldr,"stations.csv",sep="/")
   if (file.exists(stnf)){
     bbstns  <- read.csv(stnf)

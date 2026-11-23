@@ -14,7 +14,7 @@
 # #' myparms<-stns_plst_set(mystn="NSW",mysrc="bw",myid=2395)
 # #' stns_stn_addp(myparms,myStation="Faulconbridge")
 stns_stn_addp<-function(myparms,myStation=""){
-stns_stn_add(myparms$mystn,myparms$mysrc,myparms$myid,mystation=myStation,stnf=myparms$stnsf,root=myparms$myroot)
+stns_stn_add(myparms$mystn,myparms$mysrc,myparms$myid,mystation=myStation,stnf=myparms$mystnsf,root=myparms$myroot)
   }
 
 

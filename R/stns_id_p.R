@@ -22,7 +22,7 @@
 #' ##-----------------------
 #' # get id for PUC station database downloaded from birdweather.com
 #' ##-----------------------
-#' myparms$stnsf=myfile
+#' myparms$mystnsf=myfile
 #' stns_id_p(myparms)
 #' ##-----------------------
 #' # get id for BirdNET-Pi station associated with SQLite database file download
@@ -38,7 +38,7 @@
 #' str(myparms)
 #' stns_id_p(myparms)
 stns_id_p <- function(myparms){
-  tmpStns<-stns_db(myparms$stnsf)
+  tmpStns<-stns_db(myparms$mystnsf)
   myid=tmpStns$id[tmpStns$Stn_key==myparms$mystn & tmpStns$Src==myparms$mysrc]
   return(myid[1])
 }

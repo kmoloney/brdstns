@@ -13,7 +13,7 @@
 #' @param mymo Month of data to process, default is 0 but some routines may require a specific year to be entered.
 #' @param brdfrm Brdbrain dataframe for further analysis, usually populated internally after downloading data and used to pass data for further processing in other packages
 #' @param myroot Root directory below which all output is stored. The package default value is "Aviary"
-#' @param mystnf Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information
+#' @param mystnsf Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information
 #' @param show Boolean with a default of FALSE.  Setting it to true prints out the list structure when the function is called
 #'
 #' @importFrom utils str
@@ -21,7 +21,7 @@
 #' @details
 #'
 #' #### Parameters in list not set directly through function arguments
-#' - *stnsf:* contains the path to the stations database file from the current working directory.  It is set to 'myroot/brddat/stations.csv' when the list is created.
+#' - *mystnsf:* contains the path to the stations database file from the current working directory.  It is set to 'myroot/brddat/stations.csv' when the list is created.
 #' - *bbdat:* boolean value set to FALSE indicating any dataframe pointed to by brdfrm is raw download data
 #' - *ltype:* indicates the type of parameter list, in this case one used by the brdstns package and set to a value of *"stns"*
 #'
@@ -52,7 +52,7 @@ stns_plst_set<-function(mystn,
                      mymo=0,
                      brdfrm=NULL,
                      myroot="",
-                     mystnf="",
+                     mystnsf="",
                      show=FALSE){
  if(myroot=="")myroot=stnsroot
   mydat=list(mystn = mystn,
@@ -62,7 +62,7 @@ stns_plst_set<-function(mystn,
              mymo=mymo,
              brdfrm=brdfrm,
              myroot=myroot,
-             stnsf=stns_fp(stnf=mystnf,myroot),
+             mystnsf=stns_fp(stnf=mystnsf,myroot),
              bbdat=FALSE,
              ltype="stns")
 if(show)utils::str(mydat)

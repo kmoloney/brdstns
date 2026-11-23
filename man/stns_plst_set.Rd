@@ -12,7 +12,7 @@ stns_plst_set(
   mymo = 0,
   brdfrm = NULL,
   myroot = "",
-  mystnf = "",
+  mystnsf = "",
   show = FALSE
 )
 }
@@ -31,7 +31,7 @@ stns_plst_set(
 
 \item{myroot}{Root directory below which all output is stored. The package default value is "Aviary"}
 
-\item{mystnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{mystnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
 
 \item{show}{Boolean with a default of FALSE.  Setting it to true prints out the list structure when the function is called}
 }
@@ -46,7 +46,7 @@ for Birdnet-Pi stations (\emph{mysrc}="bw") or puc stations (\emph{mysrc}="puc")
 \details{
 \subsection{Parameters in list not set directly through function arguments}{
 \itemize{
-\item \emph{stnsf:} contains the path to the stations database file from the current working directory.  It is set to 'myroot/brddat/stations.csv' when the list is created.
+\item \emph{mystnsf:} contains the path to the stations database file from the current working directory.  It is set to 'myroot/brddat/stations.csv' when the list is created.
 \item \emph{bbdat:} boolean value set to FALSE indicating any dataframe pointed to by brdfrm is raw download data
 \item \emph{ltype:} indicates the type of parameter list, in this case one used by the brdstns package and set to a value of \emph{"stns"}
 }
