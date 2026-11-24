@@ -2,20 +2,26 @@
 % Please edit documentation in R/stns_util.R
 \name{stns_fp}
 \alias{stns_fp}
-\title{Return path to stations database file}
+\title{Path to stations database file}
 \usage{
-stns_fp(stnf = "", root = "")
+stns_fp(stnsf = "", root = "")
 }
 \arguments{
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{User chosen path to stations database file. The default file path is \emph{"Aviary/brddat/staions.csv"}. See 'stns_plst_set()' for more information}
 
-\item{root}{Self chosen path to stations database file}
+\item{root}{User chosen root for the stations database file.  It produces the path path \emph{'\strong{root}/brddat/staions.csv'}}
+}
+\value{
+Path to stations database file.
 }
 \description{
-Return path to stations database file
+Sets and returns the path to the stations database file.  The default path is \emph{'Aviary/brddat/staions.csv'}.
 }
 \examples{
 stns_fp()
 stns_fp(root="data")
-stns_fp(stnf="Aviary/brddat/stations.csv")
+stns_fp(stnsf="newdata/brddat/stations.csv")
+}
+\seealso{
+\code{\link[=stns_plst_set]{stns_plst_set()}}
 }

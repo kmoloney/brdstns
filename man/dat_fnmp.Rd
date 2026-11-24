@@ -22,7 +22,7 @@ Filename with the option of including the relative path to the file the path arg
 \description{
 Creates a file name based on a list containing parameters describing the data to obtain.  See help for 'bw_plst_set()' for more details.
 \itemize{
-\item Required variables in myparms to create a file name are short station name ('mystn'), source of the station data ('mysrc'), the year of the data ('myyr') and the month of the data ('mymo').
+\item Required variables in myparms to create a file name are short station name ('mystnkey'), source of the station data ('mysrc'), the year of the data ('myyr') and the month of the data ('mymo').
 }
 }
 \examples{

@@ -1,7 +1,7 @@
 #' Constructs the name for a brdbrain database file
 #'
 #' Creates a file name based on a list containing parameters describing the data to obtain.  See help for 'bw_plst_set()' for more details.
-#' - Required variables in myparms to create a file name are short station name ('mystn'), source of the station data ('mysrc'), the year of the data ('myyr') and the month of the data ('mymo').
+#' - Required variables in myparms to create a file name are short station name ('mystnkey'), source of the station data ('mysrc'), the year of the data ('myyr') and the month of the data ('mymo').
 #'
 #'
 #' @param myparms Parameter list defining brdbrain data to save or load
@@ -24,7 +24,7 @@
 #' dat_fnmp(myparms,extn=".rds",stnf=mystns)
 #' dat_fnmp(myparms,mypath="data/subfldr",extn=".rds",stnf=mystns)
 dat_fnmp<-function(myparms,mypath="",extn=".csv",stnf=""){
-  thestn=stns_stnm(myparms,stnf=stnf)
+  thestn=stns_stnm_p(myparms,stnsf=stnf)
   thehdr=paste (paste(myparms$myyr,"-",sep=""),moStr(myparms$mymo),"-detections",sep = "")
   mysfx=myparms$mysrc
   if(myparms$bbdat)mysfx="bb"

@@ -62,5 +62,5 @@ NSW		\tab NSW	\tab 	bw		\tab 4376	\tab 	-33.6919	\tab 	150.5283	\tab 	0.01		\tab
 }
 \examples{
 mystns=system.file("extdata/stations.csv", package = "brdstns")
-stns_db(stnf=mystns)
+stns_db(stnsf=mystns)
 }

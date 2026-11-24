@@ -1,10 +1,10 @@
 #' Get SQLite station info from db file
 #'
-#' @param mykey station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm()' for details.
+#' @param mykey station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm_p()' for details.
 #' @param myid ID obtained from birdweather.com
 #' @param mysrc station type for data, i.e., "puc", "bw" or "pi"
 #' @param mystation Full name of station. Default is ' *mystation*="" ' which sets full name of station to *mykey*
-#' @param stnf Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information
+#' @param stnsf Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information
 #'
 #' @importFrom lutz tz_lookup_coords
 #' @importFrom DBI dbGetQuery
@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-sql_stn_add<-function(mykey,mysrc,myid,mystation="",stnf=""){
+sql_stn_add<-function(mykey,mysrc,myid,mystation="",stnsf=""){ #don't need "mysrc", "myid"
   newstation=NA
   lat=NULL
   lon=NULL
@@ -43,7 +43,7 @@ if(results$CountryCode=="AUS")mycont="Oceania"
 
 tmpstation$Stn_key   = mykey
 tmpstation$Station   = mystation
-tmpstation$id        = stns_id_newpi_set(stnf="")
+tmpstation$id        = stns_id_newpi_set(stnsf=stnsf)
 tmpstation$TZone     = tz_lookup_coords(tmpstation$Lat, tmpstation$Lon, method = "accurate")
 tmpstation$state     = results$Region
 tmpstation$country   = results$CntryName

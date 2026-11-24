@@ -4,10 +4,10 @@
 \alias{gql_stn_add}
 \title{Title}
 \usage{
-gql_stn_add(mykey, mysrc, myid, mystation = "", stnf = "")
+gql_stn_add(mykey, mysrc, myid, mystation = "", stnsf = "")
 }
 \arguments{
-\item{mykey}{station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm()' for details.}
+\item{mykey}{station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm_p()' for details.}
 
 \item{mysrc}{station type for data, i.e., "puc", "bw" or "pi"}
 
@@ -15,7 +15,7 @@ gql_stn_add(mykey, mysrc, myid, mystation = "", stnf = "")
 
 \item{mystation}{Full name of station. Default is ' \emph{mystation}="" ' which sets full name of station to \emph{mykey}}
 
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
 }
 \description{
 Title

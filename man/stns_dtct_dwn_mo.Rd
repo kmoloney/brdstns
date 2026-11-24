@@ -17,7 +17,7 @@ Calls functions to query PUC or BirdNET-Pi database for one month of data
 }
 \examples{
 
-myparms=stns_plst_set(mystn = "Munn", mysrc ="bw",myyr=2026,mymo=11)
+myparms=stns_plst_set(mystnkey = "Munn", mysrc ="bw",myyr=2026,mymo=11)
 }
 \seealso{
 \itemize{

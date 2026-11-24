@@ -2,17 +2,35 @@
 % Please edit documentation in R/stns_util_chk.R
 \name{stns_chk_stn}
 \alias{stns_chk_stn}
-\title{Check if station exists for stnkey value and station source type}
+\title{Test for station entry in stations database}
 \usage{
-stns_chk_stn(mystn, mysrc, stnf = "")
+stns_chk_stn(mystnkey, mysrc, stnsf = "")
 }
 \arguments{
-\item{mystn}{station key}
+\item{mystnkey}{station key which is a short name used to identify a specific bird song listening station.}
 
-\item{mysrc}{station source}
+\item{mysrc}{station source which is source providing a bird listening station's downloaded data. This can be "puc","bw" or "pi".}
 
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+}
+\value{
+Logical TRUE if entry exists in 'stations.csv' database and FALSE if doesn't.
 }
 \description{
-Check if station exists for stnkey value and station source type
+Tests for station's existence in \emph{'stations.csv'} based on a specific combination of a station's key value \emph{'mystnkey'} and source \emph{'mysrc'}.
+}
+\examples{
+myfile <- system.file("extdata/stations.csv", package = "brdstns")
+stns_chk_stn("Cedar","puc",stnsf=myfile)
+stns_chk_stn("XXX","puc",stnsf=myfile)
+stns_chk_stn("Cedar","XXX",stnsf=myfile)
+stns_chk_stn("Cedar","puc",stnsf="XXX")
+
+}
+\seealso{
+\itemize{
+\item \code{\link[=stns_plst_set]{stns_plst_set()}} for information on the parameter list ('myparms') argument
+\item \code{\link[=stns_db]{stns_db()}} for information on the variables in the stations database file.
+\item \code{\link[=stns_chk_stnp]{stns_chk_stnp()}} which provides a wrapper for this function using a parameter list as an argument.
+}
 }

@@ -2,22 +2,27 @@
 % Please edit documentation in R/stns_util_chk.R
 \name{stns_chk_id}
 \alias{stns_chk_id}
-\title{Check if station id exists in stations database}
+\title{Check if a specific station ID exists}
 \usage{
-stns_chk_id(myid, stnf = "")
+stns_chk_id(myid, stnsf = "")
 }
 \arguments{
-\item{myid}{ID to check}
+\item{myid}{Station ID to check}
 
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See \emph{'stns_plst_set()'} for more information}
 }
 \value{
-Boolean
+Boolean - TRUE if \emph{'myid'} is found in the stations database file, FALSE if not.
 }
 \description{
-Check if station id exists in stations database
+Check to see if a specific station ID exists in the \emph{'stations.csv'} database file
 }
 \examples{
 stns_chk_id(1)
 stns_chk_id(-10)
+}
+\seealso{
+\itemize{
+\item \code{\link[=stns_db]{stns_db()}}
+}
 }

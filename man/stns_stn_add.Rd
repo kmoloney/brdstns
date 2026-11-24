@@ -7,11 +7,11 @@
 stns_stn_add(mykey, mysrc, myid = 0, mystation = "", stnf = "", root = "")
 }
 \arguments{
-\item{mykey}{station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm()' for details.}
+\item{mykey}{station key which is used to pull the full station name from the "stations.csv" file. Usually station name or shortened station name. See 'stns_stnm_p()' for details.}
 
 \item{mysrc}{station type for data, i.e., "puc", "bw" or "pi"}
 
-\item{myid}{ID obtained from birdweather.com}
+\item{myid}{ID obtained from birdweather.com if the source is "puc" or "bw". An id number will be added automatically for a "pi" station.}
 
 \item{mystation}{Full name of station. Default is ' \emph{mystation}="" ' which sets full name of station to \emph{mykey}}
 

@@ -15,7 +15,7 @@
 #'
 #' @examples
 #'
-#' myparms=stns_plst_set(mystn = "Munn", mysrc ="bw",myyr=2026,mymo=11)
+#' myparms=stns_plst_set(mystnkey = "Munn", mysrc ="bw",myyr=2026,mymo=11)
 stns_dtct_dwn_mo<-function(myparms){
   if(myparms$mysrc=="pi"){
     sql_dtcts_dwn_mo(myparms) ->myparms

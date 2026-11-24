@@ -6,7 +6,7 @@
 #' for Birdnet-Pi stations (*mysrc*="bw") or puc stations (*mysrc*="puc")
 #'
 #'
-#' @param mystn Short station name ('Stn_key' in stations database)
+#' @param mystnkey Short station name ('Stn_key' in stations database)
 #' @param mysrc Station src which can be "puc", "bw" or "pi" ('Src' in stations database)
 #' @param myid Unique id number for station.  Puc and bw ids are provided by birdweather.com. The brdstns package will automatically produce an id when a new station is added.
 #' @param myyr Year of data to process, default is 0 but many routines will require a specific year to be entered.
@@ -45,7 +45,7 @@
 #' str(myparms)
 #' myparms<-stns_plst_set("Munn","pi",myyr=2026,mymo=9,myroot="data")
 #' str(myparms)
-stns_plst_set<-function(mystn,
+stns_plst_set<-function(mystnkey,
                      mysrc,
                      myid=0,
                      myyr=0,
@@ -55,14 +55,14 @@ stns_plst_set<-function(mystn,
                      mystnsf="",
                      show=FALSE){
  if(myroot=="")myroot=stnsroot
-  mydat=list(mystn = mystn,
+  mydat=list(mystnkey = mystnkey,
              mysrc =mysrc,
              myid=myid,
              myyr=myyr,
              mymo=mymo,
              brdfrm=brdfrm,
              myroot=myroot,
-             mystnsf=stns_fp(stnf=mystnsf,myroot),
+             mystnsf=stns_fp(stnsf=mystnsf,myroot),
              bbdat=FALSE,
              ltype="stns")
 if(show)utils::str(mydat)

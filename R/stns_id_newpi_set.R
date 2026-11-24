@@ -4,11 +4,11 @@
 #'
 #' @noRd
 #'
-stns_id_newpi_set<-function(stnf=""){
+stns_id_newpi_set<-function(stnsf=""){
  Src=NULL
  newstnum=1
-if( stns_chk_db(stnf)){
-   mystns<-stns_db(stnf)
+if( stns_chk_db(stnsf=stnsf)){
+   mystns<-stns_db(stnsf=stnsf)
   ##-- increment pi station id by one
    mystns=subset(mystns,Src=="pi")
   newstnum=max(mystns$id)+1

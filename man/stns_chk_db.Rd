@@ -2,21 +2,21 @@
 % Please edit documentation in R/stns_util_chk.R
 \name{stns_chk_db}
 \alias{stns_chk_db}
-\title{Check if stations database file exists}
+\title{Check for stations database file}
 \usage{
-stns_chk_db(stnf = "")
+stns_chk_db(stnsf = "")
 }
 \arguments{
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
 }
 \value{
-Boolean
+Boolean TRUE if the station is found, FALSE if not.
 }
 \description{
-Check if stations database file exists
+Checks to determine if the stations database file exists. Default is to check \emph{'Aviary/brddat/stations.csv'}
 }
 \examples{
 stns_chk_db()
-stns_chk_db(stnf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/"))
+stns_chk_db(stnsf="data/brddat/stations.csv")
 stns_chk_db("xx")
 }

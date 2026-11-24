@@ -32,7 +32,7 @@ stns_id_p(myparms)
 ##-----------------------
 # get id for BirdNET-Pi station associated with SQLite database file download
 ##-----------------------
-myparms$mystn="NSW"
+myparms$mystnkey="NSW"
 myparms$mysrc="pi"
 str(myparms)
 stns_id_p(myparms)

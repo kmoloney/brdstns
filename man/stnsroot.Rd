@@ -3,20 +3,17 @@
 \docType{data}
 \name{stnsroot}
 \alias{stnsroot}
-\title{Global root directory}
+\title{Global root}
 \format{
 \subsection{\code{stnsroot}}{
 
 A data string for the location to store bird station data
 }
 }
-\source{
-User input
-}
 \usage{
 stnsroot
 }
 \description{
-Used for storing data within current working directory
+Default root directory for storing bird listening station data output
 }
 \keyword{datasets}

@@ -4,34 +4,31 @@
 \alias{stns_chk_stnp}
 \title{Test for station entry in stations database}
 \usage{
-stns_chk_stnp(myparms, stnf = "")
+stns_chk_stnp(myparms, stnsf = "")
 }
 \arguments{
-\item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
-\itemize{
-\item \emph{myparms$mystn:} station key which is used to pull the full station name from the "stations.csv" file. See 'stns_stnm()' for details.
-\item \emph{myparms$mysrc:} station type for data, i.e., "puc", "bw" or "pi"
-}}
+\item{myparms}{List of parameter values to determine if a specific station is in \emph{'stations.csv'} the stations database file. Necessary parameter values are a station's key value \emph{'mystnkey'} and source \emph{'mysrc'}.}
 
-\item{stnf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
+\item{stnsf}{Path to file holding listening station information. Setting this changes the path from the default file path. See 'stns_plst_set()' for more information}
 }
 \value{
-Logical TRUE if entry exists in 'stations.csv' database and FALSE if doesn't
+Logical TRUE if entry exists in 'stations.csv' database and FALSE if doesn't.
 }
 \description{
-This function is mainly provided as a tool for use in internal functions.
+Tests for station's existence in \emph{'stations.csv'} based on a specific combination of a station's key value \emph{'mystnkey'} and source \emph{'mysrc'}. It is a wrapper for the \emph{'stns_chk_stn()'} fucntion that doesn't use a parmeter list as an argument.
 }
 \examples{
 myfile <- system.file("extdata/stations.csv", package = "brdstns")
 myparms<-stns_plst_set("Cedar","puc")
 str(myparms)
-stns_chk_stnp(myparms,stnf=myfile)
-myparms$mystn="XXX"
-stns_chk_stnp(myparms,stnf=myfile)
+stns_chk_stnp(myparms,stnsf=myfile)
+myparms$mystnkey="XXX"
+stns_chk_stnp(myparms,stnsf=myfile)
 }
 \seealso{
 \itemize{
-\item \code{\link[=stns_db]{stns_db()}} for information on the variables in the stations database file.
+\item \code{\link[=stns_chk_stn]{stns_chk_stn()}} is the same function using simple arguments instead of a list of parameters.
 \item \code{\link[=stns_plst_set]{stns_plst_set()}} for information on the parameter list ('myparms') argument
+\item \code{\link[=stns_db]{stns_db()}} for information on the variables in the stations database file.
 }
 }

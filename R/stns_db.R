@@ -43,18 +43,18 @@
 # #' - [bb_stns_stnm()]
 # #' - [bb_stns_id()]
 #'
-#' @param stnf path to stations database file
+#' @param stnsf path to stations database file
 #'
 #' @examples
 #' mystns=system.file("extdata/stations.csv", package = "brdstns")
-#' stns_db(stnf=mystns)
-stns_db <- function(stnf=""){
-  if(stnf=="")stnf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/")
+#' stns_db(stnsf=mystns)
+stns_db <- function(stnsf=""){
+  if(stnsf=="")stnsf=paste(brdstns::stnsroot,"brddat/stations.csv",sep="/")
    # thestns=paste(stnsroot,sbfldr,"stations.csv",sep="/")
-  if (file.exists(stnf)){
-    bbstns  <- read.csv(stnf)
+  if (file.exists(stnsf)){
+    bbstns  <- read.csv(stnsf)
     return(bbstns)
-  } else {   print(paste("The station database file was not found: ",stnf))
+  } else {   print(paste("The station database file was not found: ",stnsf))
     print("Set working directory so that the file is available")
     print("See help for '?stns_db' to learn how to set up the stations file")
   }

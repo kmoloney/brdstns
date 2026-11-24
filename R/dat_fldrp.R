@@ -26,7 +26,7 @@
 # fldrp(myparm,"archives",stnf=mystns)
 # fldrp(myparm,"archives",root="data",stnf=mystns)
 dat_fldrp<-function(parmlst, sbfldr="",root="data",stnf=""){
-  thestn=stns_stnm(parmlst,stnf=stnf)
+  thestn=stns_stnm_p(parmlst,stnsf=stnf)
 #  thepath=  fldrp(myroot = root,stn =thestn, sbfldr =sbfldr, sfx =parmlst$mysrc)
   thepath=  fldrp(myroot = parmlst$myroot,stn =thestn, sbfldr =sbfldr, sfx =parmlst$mysrc)
   if(!file.exists(thepath)){

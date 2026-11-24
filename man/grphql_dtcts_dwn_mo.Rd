@@ -18,7 +18,7 @@ Downloads data from Birdweather.com databases for BirdNET-Pi and PUC stations
 }
 \examples{
 
-myparms=stns_plst_set(mystn = "Munn", mysrc ="pi",myyr=2026,mymo=11)
+myparms=stns_plst_set(mystnkey = "Munn", mysrc ="pi",myyr=2026,mymo=11)
 
 
 }

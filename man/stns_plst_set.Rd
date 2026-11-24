@@ -5,7 +5,7 @@
 \title{Create a list of arguments for downloading data for bird listening stations}
 \usage{
 stns_plst_set(
-  mystn,
+  mystnkey,
   mysrc,
   myid = 0,
   myyr = 0,
@@ -17,7 +17,7 @@ stns_plst_set(
 )
 }
 \arguments{
-\item{mystn}{Short station name ('Stn_key' in stations database)}
+\item{mystnkey}{Short station name ('Stn_key' in stations database)}
 
 \item{mysrc}{Station src which can be "puc", "bw" or "pi" ('Src' in stations database)}
 

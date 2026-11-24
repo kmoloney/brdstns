@@ -9,7 +9,7 @@ stns_new(myparms, root = "", stnf = "")
 \arguments{
 \item{myparms}{List of parameter values to determine station, src and timeframe of data to download. Required parameters are:
 \itemize{
-\item \emph{myparms$mystn:} station key which is used to pull the full station name from the "stations.csv" file. See 'stns_stnm()' for details.
+\item \emph{myparms$mystnkey:} station key which is used to pull the full station name from the "stations.csv" file. See 'stns_stnm_p()' for details.
 \item \emph{myparms$mysrc:} station type for data, i.e., "puc", "bw" or "pi"
 }}
 
@@ -24,7 +24,9 @@ nothing
 Create directories and subdirectories for a bird listening station
 }
 \examples{
-\dontshow{.old_wd <- setwd(tempdir())}
+\dontshow{
+.old_wd <- setwd(tempdir())
+}
 myparms<-stns_plst_set("Cedar","puc",2026,9)
 mystns=system.file("extdata/stations.csv", package = "brdstns")
 # Create a new directories and subdirectories in the default location
@@ -38,11 +40,13 @@ stns_new(myparms,root="Test",stnf=mystns)
 myparms<-stns_plst_set("NSW","bw",2026,9)
 stns_new(myparms,root="Test",stnf=mystns)
 fs::dir_tree("Test")
-\dontshow{setwd(.old_wd)}
+\dontshow{
+setwd(.old_wd)
+}
 }
 \seealso{
 \itemize{
 \item \code{\link[=stns_plst_set]{stns_plst_set()}} for parameter list structure
-\item \code{\link[=stns_stnm]{stns_stnm()}} for accessing the full station name using the station key and src
+\item \code{\link[=stns_stnm_p]{stns_stnm_p()}} for accessing the full station name using the station key and src
 }
 }

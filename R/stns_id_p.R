@@ -27,7 +27,7 @@
 #' ##-----------------------
 #' # get id for BirdNET-Pi station associated with SQLite database file download
 #' ##-----------------------
-#' myparms$mystn="NSW"
+#' myparms$mystnkey="NSW"
 #' myparms$mysrc="pi"
 #' str(myparms)
 #' stns_id_p(myparms)
@@ -39,6 +39,6 @@
 #' stns_id_p(myparms)
 stns_id_p <- function(myparms){
   tmpStns<-stns_db(myparms$mystnsf)
-  myid=tmpStns$id[tmpStns$Stn_key==myparms$mystn & tmpStns$Src==myparms$mysrc]
+  myid=tmpStns$id[tmpStns$Stn_key==myparms$mystnkey & tmpStns$Src==myparms$mysrc]
   return(myid[1])
 }

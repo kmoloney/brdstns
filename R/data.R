@@ -1,7 +1,7 @@
-#' Global root directory
+#' Global root
 #'
-#' Used for storing data within current working directory
+#' Default root directory for storing bird listening station data output
 #' @format ## `stnsroot`
 #' A data string for the location to store bird station data
-#' @source User input
+#' @Value Package default which is 'Aviary'
 "stnsroot"
